@@ -16,6 +16,15 @@ services:
     ports:
       - 27017:27017
     restart: unless-stopped
+  webrtc:
+    build: webrtc-builds
+    ports:
+      - 8888
+      - 8080
+      - 8089
+      - 3478
+      - 3033
+    command: out/src/out/linux-x64/Release/peerconnection_server 
   node-express:
     build: node-express
     ports:

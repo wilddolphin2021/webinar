@@ -4,5 +4,8 @@ server {
     location / {
         proxy_pass   http://node-express:3000;
     }
+    location /webrtc {
+        proxy_pass   http://webrtc:8888;
+    }
 
 }
